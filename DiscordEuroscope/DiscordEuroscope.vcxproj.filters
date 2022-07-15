@@ -50,10 +50,25 @@
     <ClInclude Include="DiscordEuroscopeExt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="inc\3.1d\EuroScopePlugIn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\3.2\EuroScopePlugIn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\discord_register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\discord_rpc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DiscordEuroscope.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\DiscordEuroscope_RadioCallsigns.txt" />
   </ItemGroup>
 </Project>

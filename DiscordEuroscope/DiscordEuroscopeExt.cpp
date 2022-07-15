@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "DiscordEuroscopeExt.h"
+#pragma warning(disable : 4996)
 
-
-DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopePlugIn::COMPATIBILITY_CODE, "Discord Euroscope", "1.1.0", "Kirollos Nashaat", "https://github.com/Kirollos/DiscordEuroscope")
+DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopePlugIn::COMPATIBILITY_CODE, "Discord Euroscope", "1.1.1", "Kirollos Nashaat, modded by AM", "https://github.com/Kirollos/DiscordEuroscope")
 {
 	DiscordEventHandlers handlers;
 	memset(&handlers, 0, sizeof(handlers));
 	// handlers
-	Discord_Initialize("477907858072272896", &handlers, 1, NULL);
+	Discord_Initialize("997527953908977745", &handlers, 1, NULL);
 	this->EuroInittime = (int)time(NULL);
 
 	char DllPathFile[_MAX_PATH];
@@ -30,7 +30,7 @@ DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopeP
 		{
 			// I want to split in C instead
 			if (std::string(line).find(' ') == std::string::npos)
-			{delete line; continue;}
+			{delete[] line; continue;}
 			std::string callsign;
 			std::string radioname;
 			int i = 0;
@@ -50,7 +50,7 @@ DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopeP
 				RadioCallsigns.insert(std::pair<std::string, std::string>(callsign, radioname));
 			}
 		}
-		delete line;
+		delete[] line;
 	}
 	if(fs.is_open())
 		fs.close();
@@ -58,12 +58,12 @@ DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopeP
 	char* dmsg = new char[100];
 	int count = RadioCallsigns.size();
 	sprintf(dmsg, "Successfully parsed %i callsign%s", count, count == 1 ? "!" : "s!");
-	DisplayUserMessage("Message", "DiscordEuroscope", dmsg, true, true, false, true, false);
+	DisplayUserMessage("Message", "DiscordEuroscope_VCLvACC", dmsg, true, true, false, true, false);
 	if (count == 0)
 	{
-		DisplayUserMessage("Message", "DiscordEuroscope", "If you haven't configured this properly, make sure you are writing to", true, true, false, true, false);
-		DisplayUserMessage("Message", "DiscordEuroscope", "DiscordEuroscope_RadioCallsigns.txt, Each line holds a callsign", true, true, false, true, false);
-		DisplayUserMessage("Message", "DiscordEuroscope", "Example: HECC_CTR Cairo Control", true, true, false, true, false);
+		DisplayUserMessage("Message", "DiscordEuroscope_VCLvACC", "If you haven't configured this properly, make sure you are writing to", true, true, false, true, false);
+		DisplayUserMessage("Message", "DiscordEuroscope_VCLvACC", "DiscordEuroscope_RadioCallsigns.txt, Each line holds a callsign", true, true, false, true, false);
+		DisplayUserMessage("Message", "DiscordEuroscope_VCLvACC", "Example: VVHM_CTR Ho Chi Minh Control", true, true, false, true, false);
 	}
 	delete dmsg;
 #endif
@@ -83,22 +83,22 @@ VOID CALLBACK DiscordTimer(_In_ HWND hwnd, _In_ UINT uMsg, _In_ UINT_PTR idEvent
 		return;
 	DiscordRichPresence discordPresence;
 	memset(&discordPresence, 0, sizeof(discordPresence));
-	discordPresence.largeImageKey = "es";
+	discordPresence.largeImageKey = "default";
 	discordPresence.startTimestamp = inst->EuroInittime;
 	switch (pMyPlugIn->GetConnectionType())
 	{
 		using namespace EuroScopePlugIn;
 	case CONNECTION_TYPE_NO:
-		discordPresence.details = "Idle";
+		discordPresence.details = "Idle (Store closed)";
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_PLAYBACK:
-		discordPresence.details = "Playback";
+		discordPresence.details = "Playback (Hanging out)";
 		
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_SWEATBOX:
-		discordPresence.details = "Sweatbox";
+		discordPresence.details = "Sweatbox (Upgrading)";
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_DIRECT:
@@ -118,26 +118,26 @@ VOID CALLBACK DiscordTimer(_In_ HWND hwnd, _In_ UINT uMsg, _In_ UINT_PTR idEvent
 		if (inst->RadioCallsigns.find(callsign) != inst->RadioCallsigns.end())
 			discordPresence.largeImageText = inst->RadioCallsigns[callsign].c_str();
 		sprintf(tmp, "%s %.2fMHz", callsign, frequency);
-		sprintf(tmp2, "Aircraft tracked (%i of %i)", inst->CountTrackedAC(), inst->CountACinRange());
+		sprintf(tmp2, "Planes sold (%i of %i)", inst->CountTrackedAC(), inst->CountACinRange());
 		if (inst->tracklist.size() > 0) {
-			sprintf(tmp3, "Total tracks: %i", inst->tracklist.size());
+			sprintf(tmp3, "Total sales: %i", inst->tracklist.size());
 			discordPresence.smallImageText = tmp3;
-			discordPresence.smallImageKey = "ttrks";
+			discordPresence.smallImageKey = "default";
 		}
 	}
 	else
 	{
-		sprintf(tmp, "Observing as %s", callsign);
-		sprintf(tmp2, "Aircraft in range: %i", inst->CountACinRange());
+		sprintf(tmp, "New assistant named %s", callsign);
+		sprintf(tmp2, "Planes in stock: %i", inst->CountACinRange());
 	}
 	discordPresence.details = tmp;
 	discordPresence.state = tmp2;
 	discordPresence.startTimestamp = inst->EuroInittime;
 	Discord_UpdatePresence(&discordPresence);
 	Discord_RunCallbacks();
-	delete tmp;
-	delete tmp2;
-	delete tmp3;
+	delete[] tmp;
+	delete[] tmp2;
+	delete[] tmp3;
 }
 
 

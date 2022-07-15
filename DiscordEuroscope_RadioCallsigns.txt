@@ -1,0 +1,123 @@
+VDPF_2_CTR Phnom Penh Control
+VDPF_CTR Phnom Penh Control
+VDPP_APP Phnom Penh Approach
+VDPP_ATIS Phnom Penh Information
+VDPP_GND Phnom Penh Ground
+VDPP_TWR Phnom Penh Tower
+VDSR_APP Siem Reap Approach
+VDSR_ATIS Siem Reap Information
+VDSR_GND Siem Reap Ground
+VDSR_TWR Siem Reap Tower
+VDSV_APP Sihanouk Approach
+VDSV_ATIS Sihanouk ATIS
+VDSV_TWR Sihanouk Tower
+VLAP_TWR Attapeu Tower
+VLLB_APP Luang Phabang Approach
+VLLN_TWR Luang Namtha Tower
+VLPS_APP Pakse Approach
+VLPS_TWR Pakse Tower
+VLSK_APP Savannakhet Approach
+VLSK_TWR Savannakhet Tower
+VLSN_TWR Samneua Tower
+VLSP_ATIS Sepon AWOS
+VLSP_TWR Sepon Tower
+VLVT_1_CTR Vientiane Control
+VLVT_APP Vientiane Terminal
+VLVT_ATIS Vientiane Information
+VLVT_CTR Vientiane Control
+VLVT_TWR Vientiane Tower
+VLXK_TWR Xiengkhuang Tower
+DNA_APP Da Nang Control
+VCL_CTR Mekong Radar
+VVBM_TWR Buon Ma Thuot Tower
+VVCA_TWR Chu Lai Tower
+VVCM_TWR Ca Mau Tower
+VVCR_APP Cam Ranh Approach
+VVCR_TWR Cam Ranh Tower
+VVCS_TWR Conson Tower
+VVCT_TWR Can Tho Tower
+VVDL_TWR Lien Khuong Tower
+VVDN_APP Da Nang Approach
+VVDN_GND Da Nang Ground
+VVDN_TWR Da Nang Tower
+VVHM_1_CTR Ho Chi Minh Control
+VVHM_2_CTR Ho Chi Minh Control
+VVHM_3_CTR Ho Chi Minh Control
+VVHM_4_CTR Ho Chi Minh Control
+VVHM_5_CTR Ho Chi Minh Control
+VVHM_6_CTR Ho Chi Minh Control
+VVHM_A_CTR Ho Chi Minh Control
+VVHM_B_CTR Ho Chi Minh Control
+VVHM_CTR Ho Chi Minh Control
+VVPB_TWR Phu Bai Tower
+VVPC_TWR Phu Cat Tower
+VVPK_TWR Pleiku Tower
+VVPQ_TWR Phu Quoc Tower
+VVRG_TWR Rach Gia Tower
+VVTH_TWR Tuy Hoa Tower
+VVTS_2_GND Ho Chi Minh Ground
+VVTS_APP Tan Son Nhat Terminal
+VVTS_ATIS Tan Son Nhat ATIS Information
+VVTS_DEL Tan Son Nhat Delivery
+VVTS_F_APP Tan Son Nhat Arrival
+VVTS_GND Tan Son Nhat Ground
+VVTS_TWR Tan Son Nhat Tower
+VVCI_TWR Cat Bi Tower
+VVDB_TWR Dien Bien Tower
+VVDH_TWR Donghoi Tower
+VVHN_1_CTR Hanoi Control
+VVHN_2_CTR Hanoi Control
+VVHN_3_CTR Hanoi Control
+VVHN_4_CTR Hanoi Control
+VVHN_CTR Hanoi Control
+VVNB_APP Noi Bai Terminal
+VVNB_ATIS Noi Bai ATIS Information
+VVNB_DEL Noibai Delivery
+VVNB_F_APP Noibai Arrival
+VVNB_GND Noibai Ground
+VVNB_TWR Noibai Tower
+VVTX_TWR Tho Xuan Tower
+VVVD_TWR Van Don Tower
+VVVH_TWR Vinh Tower
+ASEA_2_FSS South East Asia Control
+ASEA_FSS South East Asia Control
+MNL_1_CTR Manila Control
+MNL_2_CTR Manila Control
+MNL_3_CTR Manila Control
+MNL_4_CTR Manila Control
+MNL_CTR Manila Control
+MNL_N_CTR Manila Control
+MNL_S_CTR Manila Control
+PRC_FSS Beijing Control
+VTBB_A_CTR Bangkok Control
+VTBB_B_CTR Bangkok Control
+VTBB_CTR Bangkok Control
+VTBB_F_CTR Bangkok Control
+VTBB_G_CTR Bangkok Control
+VTBB_H_CTR Bangkok Control
+VTBB_J_CTR Bangkok Control
+VTBB_P_CTR Bangkok Control
+VTBB_Q_CTR Bangkok Control
+VYYF_CTR Yangon Control
+WMFC_1_CTR Lumpur Radar
+WMFC_2_CTR Lumpur Radar
+WMFC_3_CTR Lumpur Radar
+WMFC_4_CTR Lumpur Radar
+WMFC_CTR Lumpur Radar
+WMFC_E_CTR Lumpur Radar
+WMFC_N_CTR Lumpur Radar
+WSJC_1_CTR Singapore Radar
+WSJC_2_CTR Singapore Radar
+WSJC_4_CTR Singapore Radar
+WSJC_6_CTR Singapore Radar
+WSJC_8_CTR Singapore Control
+WSJC_CTR Singapore Radar
+ZGNN_CTR Guangzhou Control
+ZGZJ_CTR Guangzhou Control
+ZGZU_CTR Guangzhou Control
+ZJSA_CTR Sanya Control
+ZJSY_2_CTR Sanya Control
+ZJSY_3_CTR Sanya Control
+ZPKM_CTR Kumning Control
+ZPPP_CTR Kunming Control
+
