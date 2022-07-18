@@ -89,16 +89,16 @@ VOID CALLBACK DiscordTimer(_In_ HWND hwnd, _In_ UINT uMsg, _In_ UINT_PTR idEvent
 	{
 		using namespace EuroScopePlugIn;
 	case CONNECTION_TYPE_NO:
-		discordPresence.details = "Idle (Store closed)";
+		discordPresence.details = "Having a break (Idle)";
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_PLAYBACK:
-		discordPresence.details = "Playback (Hanging out)";
+		discordPresence.details = "Watching CCTV (Playback)";
 		
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_SWEATBOX:
-		discordPresence.details = "Sweatbox (Upgrading)";
+		discordPresence.details = "Level up challenge (Sweatbox)";
 		Discord_UpdatePresence(&discordPresence);
 		return;
 	case CONNECTION_TYPE_DIRECT:
