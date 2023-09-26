@@ -21,7 +21,7 @@
 #pragma warning(disable : 4996)
 
 
-DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopePlugIn::COMPATIBILITY_CODE, "Discord Euroscope", "1.2.0", "Kirollos Nashaat, modded by AM", "GNU GPLv3")
+DiscordEuroscopeExt::DiscordEuroscopeExt() : EuroScopePlugIn::CPlugIn(EuroScopePlugIn::COMPATIBILITY_CODE, "Discord Euroscope", "1.2.1", "Kirollos Nashaat, modded by AM", "GNU GPLv3")
 {
 	DiscordEventHandlers handlers;
 	memset(&handlers, 0, sizeof(handlers));

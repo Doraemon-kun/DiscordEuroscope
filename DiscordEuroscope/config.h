@@ -19,8 +19,8 @@
 #define UPDATE_TIMER				(1000) // milliseconds
 
 #define DISCORD_APPID				("997527953908977745")
-#define PRESENCE_LARGE_IMAGE_KEY	("es")
-#define PRESENCE_SMALL_IMAGE_KEY	("ttrks")
+#define PRESENCE_LARGE_IMAGE_KEY	("default")
+#define PRESENCE_SMALL_IMAGE_KEY	("default")
 
 #define RADIO_CALLSIGN_MAIN			FALSE	// TRUE		-	Main title will include the radio callsign alongside the primary frequency.
 											// FALSE	-	Main title will include the actual callsign alongside the primary frequency.
